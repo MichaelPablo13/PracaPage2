@@ -1,0 +1,88 @@
+.divider {
+    height:50px;
+}
+
+section {
+    height:500px;
+    padding-top:50px;
+    padding-bottom:50px;
+    overflow:auto;
+}
+
+.bg-1 {
+	background-image: url(http://localhost:82/pracasPage/img/chico_mendes.jpg); /* in pages in php use the localhost full address*/
+    background-repeat: no-repeat;
+    background-position:  bottom center;
+    background-attachment:  fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+/*.bg-2 {
+	background: url(/img/remanco_das_aguas.jpg) ;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+.bg-3 {
+	background-image: url(/img/dorothy_stang.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+.bg-4 {
+	background-image: url(/img/parque_santa_clara.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    color:#fff;
+    background-size:cover;
+}*/
+
+#footer {
+    height: 60px;
+    background-color:#585858;
+    margin-top:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#footer a {
+  color:#efefef;
+}
+
+/* For Google Maps responsivenes*/
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+.iframe-container > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Demo styles */
+/*body{
+    padding: 50px;
+}*/
+.iframe-container{
+  margin-bottom: 50px;
+  background: #eee;
+}
+
+
