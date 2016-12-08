@@ -116,6 +116,7 @@
           });
     }       
         
+
     //Sincerely I couldn't get entirely what happened there
     function downloadUrl(url, callback) {
       var request = window.ActiveXObject ?
