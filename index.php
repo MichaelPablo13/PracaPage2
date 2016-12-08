@@ -101,7 +101,7 @@
             var plaza_name = escape(document.getElementById("plaza_name").value);
             var plaza_address = escape(document.getElementById("plaza_address").value);
             var latlng = marker_cadastro_praca.getPosition();
-            var url = "http://localhost:82/pracasPage/bd/insert_plaza.php?plaza_name=" + plaza_name + 
+            var url = "http://localhost/pracasPage/bd/insert_plaza.php?plaza_name=" + plaza_name +
                 "&plaza_address=" + plaza_address + 
                 "&latitude=" + latlng.lat() + 
                 "&longitude=" + latlng.lng();
