@@ -36,20 +36,20 @@
             map_cadastro_praca = new google.maps.Map(document.getElementById("cadastro_praca"), 
                         mapOptions_cadastro_praca); //map_cadastro_praca Instance
 
-            /*
+
             //this variable will have the content for the balloons for record the data
             var html = "<table>" +
                  "<tr><td>Nome:</td> <td><input type='text' id='plaza_name'/> </td> </tr>" +
                  "<tr><td>Endereço:</td> <td><input type='text' id='plaza_address'/></td> </tr>" +
                  "<tr><td></td><td><input type='submit' class='btn btn-success' value='Salvar e Fechar' onclick='saveData()'/></td></tr>";
-        */
 
-            var html = "<form method='Post' action='bd/insert_plaza.php'> <table>" +
-                "<tr><td>Nome:</td> <td><input type='text' id='plaza_name'/> </td> </tr>" +
-                "<tr><td>Endereço:</td> <td><input type='text' id='plaza_address'/></td> </tr>" +
-                "<tr><td>Latitude:</td> <td><input type='text' id='latitude'/></td> </tr>" +
-                "<tr><td>Longitude:</td> <td><input type='text' id='longitude'/></td> </tr>" +
-                "<tr><td></td><td><input type='submit' class='btn btn-success' value='Salvar e Fechar' onclick='saveData()'/></td></tr> </table> </form>";
+
+//            var html = "<form method='Post' action='bd/insert_plaza.php'> <table>" +
+//                "<tr><td>Nome:</td> <td><input type='text' id='plaza_name'/> </td> </tr>" +
+//                "<tr><td>Endereço:</td> <td><input type='text' id='plaza_address'/></td> </tr>" +
+//                "<tr><td>Latitude:</td> <td><input type='text' id='latitude'/></td> </tr>" +
+//                "<tr><td>Longitude:</td> <td><input type='text' id='longitude'/></td> </tr>" +
+//                "<tr><td></td><td><input type='submit' class='btn btn-success' value='Salvar e Fechar' onclick='saveData()'/></td></tr> </table> </form>";
 
 
             /*Infowindow*/
@@ -106,49 +106,49 @@
                 });
         }
 
-        function saveData() {
-            var latlng = marker_cadastro_praca.getPosition();
-            document.getElementById("latitude").innerHTML  = +latlng.lat();
-            document.getElementById("longitude").innerHTML  = +latlng.lat();
-        }
+//        function saveData() {
+//            var latlng = marker_cadastro_praca.getPosition();
+//            document.getElementById("latitude").innerHTML  = +latlng.lat();
+//            document.getElementById("longitude").innerHTML  = +latlng.lat();
+//        }
 
 
         
-//        //that's for the buttom save and sending for the page insert_plaza
-//      function saveData() {
-//            var plaza_name = escape(document.getElementById("plaza_name").value);
-//            var plaza_address = escape(document.getElementById("plaza_address").value);
-//            var latlng = marker_cadastro_praca.getPosition();
-//            var url = "http://localhost/pracasPage/bd/insert_plaza.php?plaza_name=" + plaza_name +
-//                "&plaza_address=" + plaza_address +
-//                "&latitude=" + latlng.lat() +
-//                "&longitude=" + latlng.lng();
-//
-//          downloadUrl(url, function(data, responseCode) {
-//            if (responseCode == 200 && data.length > 1) { //add response XML test
-//                /*infowindow.close();*/
-//                document.getElementById("message").innerHTML  = "Location added."+url;
-//            } else {
-//                document.getElementById("message").innerHTML  = "Failed in add the location.";
-//            }
-//          });
-//    }
-//
-//
-//    //Sincerely I couldn't get entirely what happened there
-//    function downloadUrl(url, callback) {
-//      var request = window.ActiveXObject ?
-//          new ActiveXObject('Microsoft.XMLHTTP') :
-//          new XMLHttpRequest;
-//      request.onreadystatechange = function() {
-//        if (request.readyState == 4) {
-//          request.onreadystatechange = doNothing;
-//          callback(request.responseText, request.status);
-//        }
-//      };
-//      request.open('GET', url, true);
-//      request.send(null);
-//    }*/
+        //that's for the buttom save and sending for the page insert_plaza
+      function saveData() {
+            var plaza_name = escape(document.getElementById("plaza_name").value);
+            var plaza_address = escape(document.getElementById("plaza_address").value);
+            var latlng = marker_cadastro_praca.getPosition();
+            var url = "http://localhost/pracasPage/bd/insert_plaza.php?plaza_name=" + plaza_name +
+                "&plaza_address=" + plaza_address +
+                "&latitude=" + latlng.lat() +
+                "&longitude=" + latlng.lng();
+
+          downloadUrl(url, function(data, responseCode) {
+            if (responseCode == 200 && data.length > 1) { //add response XML test
+                /*infowindow.close();*/
+                document.getElementById("message").innerHTML  = "Location added."+url;
+            } else {
+                document.getElementById("message").innerHTML  = "Failed in add the location.";
+            }
+          });
+    }
+
+
+    //Sincerely I couldn't get entirely what happened there
+    function downloadUrl(url, callback) {
+      var request = window.ActiveXObject ?
+          new ActiveXObject() :
+          new XMLHttpRequest;
+      request.onreadystatechange = function() {
+        if (request.readyState == 4) {
+          request.onreadystatechange = doNothing;
+          callback(request.responseText, request.status);
+        }
+      };
+      request.open('GET', url, true);
+      request.send(null);
+    }
 
         
 
