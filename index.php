@@ -47,7 +47,15 @@
             var html = "<form method='Post' action='bd/insert_plaza.php'> <table>" +
                 "<tr><td>Nome:</td> <td><input type='text' id='plaza_name'/> </td> </tr>" +
                 "<tr><td>Endereço:</td> <td><input type='text' id='plaza_address'/></td> </tr>" +
+                "<tr><td>Latitude:</td> <td><input type='text' id='latitude'/></td> </tr>" +
+                "<tr><td>Longitude:</td> <td><input type='text' id='longitude'/></td> </tr>" +
                 "<tr><td></td><td><input type='submit' class='btn btn-success' value='Salvar e Fechar' onclick='saveData()'/></td></tr> </table> </form>";
+
+
+            var latlng = marker_cadastro_praca.getPosition();
+            document.getElementById("latitude").innerHTML  = latlng.lat();
+            document.getElementById("longitude").innerHTML  = latlng.lng();
+
 
             /*Infowindow*/
             infowindow_cadastro_praca = new google.maps.InfoWindow({
