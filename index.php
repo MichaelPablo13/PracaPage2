@@ -212,7 +212,7 @@
     </div>
         <!--/container-->
     <div class="divider" id="message"></div>
-    <div class="divider" id="Error"></div>
+    <div class="divider" id="error"></div>
 
 
     <div class="container">
