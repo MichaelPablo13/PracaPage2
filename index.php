@@ -68,10 +68,7 @@
                     infowindow_cadastro_praca.open(map_cadastro_praca, marker_cadastro_praca);
                 });
             });
-            
-            var latlng = marker_cadastro_praca.getPosition();
-            document.getElementById("latitude").innerHTML  = latlng.lat();
-            document.getElementById("longitude").innerHTML  = latlng.lng();
+
 
             <?php
                foreach ($plazas as $plaza){
@@ -108,6 +105,13 @@
                     infowindow.open(map_cadastro_praca, marker);
                 });
         }
+
+        function saveData() {
+            var latlng = marker_cadastro_praca.getPosition();
+            document.getElementById("latitude").innerHTML  = latlng.lat();
+            document.getElementById("longitude").innerHTML  = latlng.lng();
+        }
+
 
         
 //        //that's for the buttom save and sending for the page insert_plaza
