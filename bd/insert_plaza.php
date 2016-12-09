@@ -26,10 +26,10 @@ include("conexaoBD.php");
 
 
     //Insere registros no banco de dados
-    $plaza_name = $_POST['plaza_name'];
-    $plaza_address = $_POST['plaza_address'];
-    $latitude = $_POST['latitude'];
-    $longitude = $_POST['longitude'];
+    $plaza_name = $_GET['plaza_name'];
+    $plaza_address = $_GET['plaza_address'];
+    $latitude = $_GET['latitude'];
+    $longitude = $_GET['longitude'];
 
     if($latitude == NULL){
         echo "Error";
