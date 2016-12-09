@@ -108,8 +108,8 @@
 
         function saveData() {
             var latlng = marker_cadastro_praca.getPosition();
-            document.getElementById("latitude").innerHTML  = latlng.lat();
-            document.getElementById("longitude").innerHTML  = latlng.lng();
+            document.getElementById("latitude").innerHTML  = +latlng.lat();
+            document.getElementById("longitude").innerHTML  = +latlng.lat();
         }
 
 
