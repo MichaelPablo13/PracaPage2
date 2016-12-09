@@ -139,7 +139,7 @@
     function downloadUrl(url, callback) {
       var request = window.ActiveXObject ?
           new ActiveXObject() :
-          new XMLHttpRequest;
+          new XMLHttpRequest();
       request.onreadystatechange = function() {
         if (request.readyState == 4) {
           request.onreadystatechange = doNothing;
