@@ -52,11 +52,6 @@
                 "<tr><td></td><td><input type='submit' class='btn btn-success' value='Salvar e Fechar' onclick='saveData()'/></td></tr> </table> </form>";
 
 
-            var latlng = marker_cadastro_praca.getPosition();
-            document.getElementById("latitude").innerHTML  = latlng.lat();
-            document.getElementById("longitude").innerHTML  = latlng.lng();
-
-
             /*Infowindow*/
             infowindow_cadastro_praca = new google.maps.InfoWindow({
                 content: html
@@ -74,6 +69,10 @@
                 });
             });
             
+            var latlng = marker_cadastro_praca.getPosition();
+            document.getElementById("latitude").innerHTML  = latlng.lat();
+            document.getElementById("longitude").innerHTML  = latlng.lng();
+
             <?php
                foreach ($plazas as $plaza){
 
