@@ -129,7 +129,7 @@
                 /*infowindow.close();*/
                 document.getElementById("message").innerHTML  = "Location added."+url;
             } else {
-                document.getElementById("message").innerHTML  = "Failed in add the location.";
+                document.getElementById("message").innerHTML  = "Failed in add the location."+url;
             }
           });
     }
@@ -144,6 +144,9 @@
         if (request.readyState == 4) {
           request.onreadystatechange = doNothing;
           callback(request.responseText, request.status);
+        } else {
+            document.getElementById("error").innerHTML  = "Error."+url;
+
         }
       };
       request.open('GET', url, true);
@@ -209,6 +212,8 @@
     </div>
         <!--/container-->
     <div class="divider" id="message"></div>
+    <div class="divider" id="Error"></div>
+
 
     <div class="container">
     <div class="row">
